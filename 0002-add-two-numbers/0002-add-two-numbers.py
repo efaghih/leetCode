@@ -10,6 +10,7 @@ class Solution:
         sum1 = 0
         sum2 = 0
         p = 1
+        
         while l1 or l2:
             if l2 and l1:
                 sum1 += (l1.val *  p) + (l2.val * p)
