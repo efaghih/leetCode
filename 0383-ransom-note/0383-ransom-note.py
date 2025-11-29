@@ -14,3 +14,5 @@ class Solution:
             else:
                 return False
         return True
+
+        # Note: Watch map.get(r[i], 0) cond.
