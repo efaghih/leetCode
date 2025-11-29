@@ -1,14 +1,19 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        min_price = prices[0]
-        max_profit = 0
+        l = 0
+        r = 1
+        maxx = 0
+        while r < len(prices):
+            
+            
+            if (prices[r]-prices[l] < 0):
+                l += 1
+                r = l
+            
+            elif maxx < (prices[r] - prices[l]):
+                maxx = prices[r] - prices[l]
 
-        for price in prices:
-            # Update max profit with selling today
-            max_profit = max(max_profit, price - min_price)
-
-            # Update minimum price seen so far
-            min_price = min(min_price, price)
-
-        return max_profit
+            r += 1
+            
+        return maxx
                 
