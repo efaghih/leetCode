@@ -10,8 +10,7 @@ class Solution:
                 l += 1
                 r = l
             
-            elif maxx < (prices[r] - prices[l]):
-                maxx = prices[r] - prices[l]
+            maxx = max(maxx, prices[r] - prices[l])
 
             r += 1
             
