@@ -6,7 +6,6 @@ class Solution:
             map[val] = 1 + map.get(val, 0)
             if map[val] > (n/2):
                 return val
-        print(map)
 
         
         
