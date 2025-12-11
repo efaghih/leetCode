@@ -1,12 +1,16 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         
-        i = len(s) - 1 
-        char = s[i]
+        #boundary conditions 
         if len(s) <2:
             return len(s)
         if " " not in s:
             return len(s)
+
+        #the rest conditions
+        i = len(s) - 1 
+        char = s[i]
+        
         while char == " ":
             i -= 1
             char = s[i]
