@@ -1,25 +1,14 @@
 class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
-        
-        mid = len(nums)//2
-        start = 0
-        end = len(nums)
-        if not nums:
-            return 0
-        if target < nums[0]: 
-            return 0
-        if target > nums[-1]:
-            return len(nums)
+    def searchInsert(self, nums, target):
+        start, end = 0, len(nums) - 1
 
-        while start < end:
-            if target == nums[mid]:
+        while start <= end:
+            mid = (start + end) // 2
+            if nums[mid] == target:
                 return mid
-            elif target < nums[mid]:
-                end = mid - 1
-                mid = (end + start) // 2
-            elif target > nums[mid]:
+            elif nums[mid] < target:
                 start = mid + 1
-                mid = (end + start) // 2
+            else:
+                end = mid - 1
 
-        
-        return mid
+        return start
