@@ -1,17 +1,9 @@
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-        
-        cnt_map = {}
-
+        sr = sorted(nums)
+        cnt_mp = {} 
         for i in range(len(nums)):
-            cnt_map[nums[i]] = 0
-
-        for i in range(len(nums)):
-            for key in cnt_map.keys():
-                if key > nums[i]:
-                    cnt_map[key] += 1
-
-        lst = []
-        for num in nums:
-            lst.append(cnt_map[num])
-        return lst
+            if sr[i] not in cnt_mp.keys():
+                cnt_mp[sr[i]] = i
+            
+        return [cnt_mp[num] for num in nums]
