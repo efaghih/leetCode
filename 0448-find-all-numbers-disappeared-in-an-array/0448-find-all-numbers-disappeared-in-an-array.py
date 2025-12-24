@@ -9,4 +9,4 @@ class Solution:
         for i in range(len(nums)):
             if (i+1) not in mis:
                 misList.append(i+1)
-   
+        return misList
