@@ -2,7 +2,6 @@ class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         i=0
         while i < len(digits):
-            print(i, digits[-(i+1)])  
             if digits[-(i+1)] < 9:
                 digits[-(i+1)] += 1
                 return digits
