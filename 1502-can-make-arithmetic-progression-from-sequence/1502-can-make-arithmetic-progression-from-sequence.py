@@ -5,8 +5,11 @@ class Solution:
             return False
 
         rng = s[1] - s[0]
-        for i in range(1, len(s) - 1):
-            if (s[i+1] - s[i]) != rng:
+        for i in range(1, len(s)):
+            if s[i] - s[i-1] != rng:
                 return False
             
         return True
+
+    
+  
