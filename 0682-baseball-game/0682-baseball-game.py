@@ -1,26 +1,17 @@
 class Solution:
     def calPoints(self, operations: List[str]) -> int:
-        oper = "+DC"
         rec = []
+
         for op in operations:
-            if op not in oper:
-                rec.append(int(op))
-            
-            if op == '+' and len(operations) > 1:
-                
-                a = rec.pop()
-                b = rec.pop()
-                rec.append(b)
-                rec.append(a)
-                rec.append(a+b)
-            
-            if op == 'D':
-                a = rec.pop()
-                rec.append(a)
-                rec.append(a*2)
-            
-            if op == 'C':
+            if op == '+':
+                rec.append(rec[-1] + rec[-2])
+            elif op == 'D':
+                rec.append(rec[-1] * 2)
+            elif op == 'C':
                 rec.pop()
+            else:
+                rec.append(int(op))
+
         return sum(rec)
 
             
