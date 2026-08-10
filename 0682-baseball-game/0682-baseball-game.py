@@ -21,7 +21,6 @@ class Solution:
             
             if op == 'C':
                 rec.pop()
-            print(rec)
         return sum(rec)
 
             
