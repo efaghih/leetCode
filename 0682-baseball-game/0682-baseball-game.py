@@ -8,12 +8,15 @@ class Solution:
             
             if op == '+' and len(operations) > 1:
                 
-                a = rec[-1]
-                b = rec[-2]
+                a = rec.pop()
+                b = rec.pop()
+                rec.append(b)
+                rec.append(a)
                 rec.append(a+b)
             
             if op == 'D':
-                a = rec[-1]
+                a = rec.pop()
+                rec.append(a)
                 rec.append(a*2)
             
             if op == 'C':
