@@ -8,4 +8,7 @@ class Solution:
         
         # return max_w
 
+
+        
+        # Pythonic
         return max(map(sum, accounts))
