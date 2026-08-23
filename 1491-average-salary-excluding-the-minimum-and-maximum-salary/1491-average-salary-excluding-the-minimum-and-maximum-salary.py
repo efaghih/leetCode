@@ -4,7 +4,7 @@ class Solution:
         s = 0
         s -= max(salary)
         s -= min(salary)
-        print (s)
+        
         s += sum(salary)
-        print(s)
+        
         return s / (len(salary) - 2) 
