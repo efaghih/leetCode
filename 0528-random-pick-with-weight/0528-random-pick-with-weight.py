@@ -18,9 +18,9 @@ class Solution:
         for idx, num in enumerate(self.wth):
             window += num / self.sumW
             
-            # 3. Clean check: as soon as our random number falls below the window, return the index
+   
             if x < window:
                 return idx
                 
-        # Fallback for extreme floating-point edge cases
+    
         return len(self.wth) - 1
